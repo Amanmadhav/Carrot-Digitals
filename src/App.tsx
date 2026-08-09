@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const PHONE_DISPLAY = "095676 48193";
+const PHONE_DISPLAY = "95676 48193";
 const PHONE_TEL = "+919567648193";
 const WHATSAPP = "919567648193";
 const ADDRESS =
