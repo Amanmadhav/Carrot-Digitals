@@ -188,7 +188,7 @@ function Hero() {
                 ))}
               </div>
               <span className="font-semibold text-slate-900">5.0</span>
-              <span>on Google (4 reviews)</span>
+              <span>on Google</span>
             </div>
             <div className="flex items-center gap-2">
               <ClockIcon className="w-5 h-5 text-orange-500" />
