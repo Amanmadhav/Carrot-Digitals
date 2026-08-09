@@ -188,7 +188,7 @@ function Hero() {
                 ))}
               </div>
               <span className="font-semibold text-slate-900">5.0</span>
-              <span>on Google (4 reviews)</span>
+              <span>on Google</span>
             </div>
             <div className="flex items-center gap-2">
               <ClockIcon className="w-5 h-5 text-orange-500" />
@@ -338,9 +338,16 @@ function Services() {
               </div>
               <h3 className="mt-5 text-lg font-bold text-slate-900">{s.title}</h3>
               <p className="mt-2 text-sm text-slate-600 leading-relaxed">{s.desc}</p>
-              <div className="mt-4 text-sm font-semibold text-orange-600 opacity-0 group-hover:opacity-100 transition-opacity">
+              <a
+                href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
+                  `Hi Carrot Digitals! 👋 I'm interested in your "${s.title}" service. Could you please share the details and pricing? Thank you!`
+                )}`}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-4 inline-block text-sm font-semibold text-orange-600 opacity-0 group-hover:opacity-100 transition-opacity hover:text-orange-700"
+              >
                 Enquire →
-              </div>
+              </a>
             </div>
           ))}
         </div>
@@ -348,13 +355,13 @@ function Services() {
         <div className="mt-12 text-center">
           <a
             href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
-              "Hi Carrot Digitals, I need a quote for printing."
+              "Hi Carrot Digitals! 👋 I'd like to enquire about your printing services. Could you please share the details and pricing? Thank you!"
             )}`}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-slate-900 text-white px-7 py-4 font-semibold hover:bg-slate-800 transition-colors"
           >
-            💬 WhatsApp us for a quick quote
+            Enquire →
           </a>
         </div>
       </div>
