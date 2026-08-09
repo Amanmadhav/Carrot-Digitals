@@ -188,7 +188,7 @@ function Hero() {
                 ))}
               </div>
               <span className="font-semibold text-slate-900">5.0</span>
-              <span>on Google</span>
+              <span>on Google (4 reviews)</span>
             </div>
             <div className="flex items-center gap-2">
               <ClockIcon className="w-5 h-5 text-orange-500" />
@@ -340,7 +340,7 @@ function Services() {
               <p className="mt-2 text-sm text-slate-600 leading-relaxed">{s.desc}</p>
               <a
                 href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
-                  `Hi Carrot Digitals! 👋 I'm interested in your "${s.title}" service. Could you please share the details and pricing? Thank you!`
+                  `Hi Carrot Digitals! I'd like to enquire about your ${s.title} service. Could you share more details and pricing?`
                 )}`}
                 target="_blank"
                 rel="noreferrer"
@@ -355,7 +355,7 @@ function Services() {
         <div className="mt-12 text-center">
           <a
             href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
-              "Hi Carrot Digitals! 👋 I'd like to enquire about your printing services. Could you please share the details and pricing? Thank you!"
+              "Hi Carrot Digitals! I'd like to enquire about your printing services. Could you share details and pricing?"
             )}`}
             target="_blank"
             rel="noreferrer"
