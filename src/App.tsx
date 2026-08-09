@@ -218,7 +218,6 @@ function HeroVisual() {
             Today's best offer
           </div>
           <div className="mt-2 text-4xl md:text-5xl font-black leading-none">
-            1000 <br />
             Visiting Cards
           </div>
           <div className="mt-3 text-lg opacity-95">
@@ -228,7 +227,7 @@ function HeroVisual() {
         <div className="relative flex items-end justify-between">
           <div>
             <div className="text-xs opacity-80">Starting from</div>
-            <div className="text-3xl font-black">₹399</div>
+            <div className="text-3xl font-black">₹299</div>
           </div>
           <div className="text-7xl">🎨</div>
         </div>
