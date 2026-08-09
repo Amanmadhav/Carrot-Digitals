@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const PHONE_DISPLAY = "095676 48193";
+const PHONE_DISPLAY = "9567648193";
 const PHONE_TEL = "+919567648193";
 const WHATSAPP = "919567648193";
 const ADDRESS =
@@ -189,435 +189,6 @@ function Hero() {
               </div>
               <span className="font-semibold text-slate-900">5.0</span>
               <span>on Google (4 reviews)</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <ClockIcon className="w-5 h-5 text-orange-500" />
-              <span>Same-day delivery available</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Right visual card stack */}
-        <div className="lg:col-span-5 relative">
-          <HeroVisual />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function HeroVisual() {
-  return (
-    <div className="relative h-[420px] md:h-[500px] w-full">
-      {/* Main card */}
-      <div className="absolute top-6 right-0 md:right-4 w-[86%] h-[340px] md:h-[400px] rounded-3xl gradient-carrot shadow-2xl shadow-orange-500/30 p-8 flex flex-col justify-between text-white overflow-hidden">
-        <div className="absolute -top-16 -right-16 w-60 h-60 rounded-full bg-white/15" />
-        <div className="absolute -bottom-10 -left-10 w-40 h-40 rounded-full bg-white/10" />
-        <div className="relative">
-          <div className="text-[11px] uppercase tracking-[0.3em] font-bold opacity-90">
-            Today's best offer
-          </div>
-          <div className="mt-2 text-4xl md:text-5xl font-black leading-none">
-            1000 <br />
-            Visiting Cards
-          </div>
-          <div className="mt-3 text-lg opacity-95">
-            Matte / Glossy finish — delivered same day.
-          </div>
-        </div>
-        <div className="relative flex items-end justify-between">
-          <div>
-            <div className="text-xs opacity-80">Starting from</div>
-            <div className="text-3xl font-black">₹399</div>
-          </div>
-          <div className="text-7xl">🎨</div>
-        </div>
-      </div>
-
-      {/* Small floating card 1 */}
-      <div className="absolute top-0 left-0 bg-white rounded-2xl shadow-xl p-4 w-52 floating">
-        <div className="flex items-center gap-3">
-          <div className="w-11 h-11 rounded-xl bg-orange-100 text-2xl flex items-center justify-center">
-            📇
-          </div>
-          <div>
-            <div className="text-[11px] text-slate-500 font-medium">Fast print</div>
-            <div className="text-sm font-bold text-slate-900">Flex Banners</div>
-          </div>
-        </div>
-      </div>
-
-      {/* Small floating card 2 */}
-      <div className="absolute bottom-0 left-2 bg-white rounded-2xl shadow-xl p-4 w-60 floating" style={{ animationDelay: "0.8s" }}>
-        <div className="flex items-center gap-3">
-          <div className="w-11 h-11 rounded-xl bg-green-100 text-2xl flex items-center justify-center">
-            ⭐
-          </div>
-          <div className="flex-1">
-            <div className="text-[11px] text-slate-500 font-medium">Google Rating</div>
-            <div className="flex items-center gap-1">
-              <span className="text-base font-extrabold text-slate-900">5.0</span>
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <StarIcon key={i} className="w-3 h-3 text-amber-400 fill-amber-400" />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-/* ----------------------------- TRUST MARQUEE ----------------------------- */
-function TrustStrip() {
-  const items = [
-    "✦ Digital Printing",
-    "✦ Flex Banners",
-    "✦ Visiting Cards",
-    "✦ Wedding Invitations",
-    "✦ Brochures & Flyers",
-    "✦ ID Cards",
-    "✦ Lamination",
-    "✦ Scanning & Photocopy",
-    "✦ Online Services",
-    "✦ Stickers & Labels",
-  ];
-  const row = [...items, ...items];
-  return (
-    <div className="bg-slate-900 text-white py-4 overflow-hidden border-y border-slate-800">
-      <div className="marquee flex gap-10 whitespace-nowrap w-max">
-        {row.map((t, i) => (
-          <span key={i} className="text-sm md:text-base font-semibold tracking-wide opacity-90">
-            {t}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-/* ----------------------------- SERVICES ----------------------------- */
-function Services() {
-  const services = [
-    { icon: "🖨️", title: "Digital Printing", desc: "Crisp, vibrant colour prints — documents, photos, posters, everything." },
-    { icon: "🎗️", title: "Flex Boards & Banners", desc: "Indoor & outdoor flex printing in any size. Stage, shop, event ready." },
-    { icon: "📇", title: "Visiting Cards", desc: "Matte, glossy, textured & premium finishes. Designed on the spot." },
-    { icon: "💌", title: "Wedding & Event Cards", desc: "Custom wedding invitations, birthday, housewarming and more." },
-    { icon: "📖", title: "Brochures & Flyers", desc: "Professional marketing prints that actually bring in customers." },
-    { icon: "🪪", title: "ID Cards & Badges", desc: "PVC & printed ID cards for schools, offices and organisations." },
-    { icon: "🏷️", title: "Stickers & Labels", desc: "Product labels, logo stickers, name tags — custom shape & size." },
-    { icon: "✨", title: "Lamination", desc: "Protect certificates, documents & photos — A4 to A0 sizes." },
-    { icon: "📄", title: "Scanning & Photocopy", desc: "B&W & colour copies, high-speed scanning to PDF / email." },
-    { icon: "💻", title: "Online Service Centre", desc: "Form filling, print-outs, email, e-seva & document services." },
-    { icon: "📑", title: "Binding & Spiral", desc: "Project reports, thesis, proposals — neat and professional." },
-    { icon: "🎨", title: "Design Services", desc: "Logo, banner, invitation, poster design — our designer helps you." },
-  ];
-
-  return (
-    <section id="services" className="py-20 md:py-28 bg-white">
-      <div className="max-w-7xl mx-auto px-5 lg:px-8">
-        <SectionHeader
-          eyebrow="What we do"
-          title={
-            <>
-              Everything printed. <span className="text-orange-500">Done right.</span>
-            </>
-          }
-          subtitle="From a single-page photocopy to a 20-foot flex banner — we handle it all under one roof with best quality service."
-        />
-
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-          {services.map((s, i) => (
-            <div
-              key={i}
-              className="group relative bg-white rounded-2xl p-6 border border-slate-200/80 hover:border-orange-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300"
-            >
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-100 to-amber-100 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
-                {s.icon}
-              </div>
-              <h3 className="mt-5 text-lg font-bold text-slate-900">{s.title}</h3>
-              <p className="mt-2 text-sm text-slate-600 leading-relaxed">{s.desc}</p>
-              <div className="mt-4 text-sm font-semibold text-orange-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                Enquire →
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <a
-            href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
-              "Hi Carrot Digitals, I need a quote for printing."
-            )}`}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-slate-900 text-white px-7 py-4 font-semibold hover:bg-slate-800 transition-colors"
-          >
-            💬 WhatsApp us for a quick quote
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ----------------------------- ABOUT / WHY US ----------------------------- */
-function About() {
-  const features = [
-    { icon: "⚡", title: "Fast turnaround", desc: "Most jobs delivered the same day or next morning." },
-    { icon: "💎", title: "Best quality", desc: "Premium papers, inks & finishing. We don't cut corners." },
-    { icon: "💰", title: "Fair prices", desc: "Transparent pricing — no hidden charges, bulk discounts available." },
-    { icon: "🤝", title: "Friendly service", desc: "We help with design, suggestions & last-minute fixes — happily." },
-  ];
-
-  return (
-    <section id="about" className="py-20 md:py-28 bg-gradient-to-b from-orange-50/60 to-white relative overflow-hidden">
-      <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-orange-200/40 blur-3xl" />
-      <div className="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-14 items-center relative">
-        <div>
-          <div className="text-sm font-bold text-orange-600 uppercase tracking-[0.2em]">About us</div>
-          <h2 className="mt-3 text-3xl md:text-5xl font-black text-slate-900 leading-tight">
-            A neighbourhood print shop with <span className="text-orange-500">big-studio quality.</span>
-          </h2>
-          <p className="mt-6 text-lg text-slate-600 leading-relaxed">
-            Located right opposite the Sree Dharma Sastha Temple and Govt. New LPS in Koottikkada,
-            Carrot Digitals has been the go-to digital print house for families, students, shops and
-            small businesses across Mayyanad and Kollam.
-          </p>
-          <p className="mt-4 text-lg text-slate-600 leading-relaxed">
-            Whether it's a last-minute photocopy, a carefully designed wedding card, or a giant flex
-            banner for your event — we treat every order like it's our own. Best quality service,
-            every single time.
-          </p>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            <StatCard value="1000+" label="Happy customers" />
-            <StatCard value="5.0 ★" label="Google rating" />
-            <StatCard value="Same day" label="Delivery" />
-          </div>
-        </div>
-
-        <div className="grid sm:grid-cols-2 gap-5">
-          {features.map((f, i) => (
-            <div
-              key={i}
-              className={`bg-white rounded-2xl p-6 shadow-lg shadow-orange-500/5 border border-orange-100 ${
-                i % 2 === 1 ? "sm:translate-y-6" : ""
-              }`}
-            >
-              <div className="text-4xl">{f.icon}</div>
-              <h3 className="mt-4 text-lg font-bold text-slate-900">{f.title}</h3>
-              <p className="mt-1.5 text-sm text-slate-600">{f.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function StatCard({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="bg-white rounded-2xl px-5 py-4 border border-orange-100 shadow-sm">
-      <div className="text-xl md:text-2xl font-black text-orange-600">{value}</div>
-      <div className="text-xs text-slate-500 font-medium uppercase tracking-wider">{label}</div>
-    </div>
-  );
-}
-
-/* ----------------------------- REVIEWS ----------------------------- */
-function Reviews() {
-  const reviews = [
-    {
-      name: "Pavan Madhav",
-      initials: "PM",
-      color: "bg-orange-500",
-      rating: 5,
-      text: "Excellent service and superb quality printing. The team is very helpful and delivers on time. Highly recommended for anyone in Mayyanad!",
-    },
-    {
-      name: "Arun Kumar",
-      initials: "AK",
-      color: "bg-emerald-500",
-      rating: 5,
-      text: "Got my wedding cards printed here. Beautiful designs and very reasonable price. Everyone complimented the quality!",
-    },
-    {
-      name: "Sreeja Nair",
-      initials: "SN",
-      color: "bg-rose-500",
-      rating: 5,
-      text: "Very friendly staff and fast service. Needed urgent photocopies and printouts — they helped within minutes. Thank you Carrot Digitals!",
-    },
-    {
-      name: "Mohammed Rashid",
-      initials: "MR",
-      color: "bg-sky-500",
-      rating: 5,
-      text: "I run a small shop nearby and I get all my flex banners and visiting cards done here. Best in Koottikada, hands down.",
-    },
-  ];
-
-  return (
-    <section id="reviews" className="py-20 md:py-28 bg-slate-950 text-white relative overflow-hidden">
-      <div className="absolute inset-0 opacity-20 grid-pattern" />
-      <div className="relative max-w-7xl mx-au    >
-      <div className="max-w-7xl mx-auto px-5 lg:px-8 h-16 md:h-20 flex items-center justify-between">
-        <a href="#home" className="flex items-center gap-2.5 group">
-          <Logo />
-          <div className="leading-tight">
-            <div className="font-extrabold text-lg md:text-xl text-slate-900 tracking-tight">
-              Carrot <span className="text-orange-500">Digitals</span>
-            </div>
-            <div className="text-[10px] md:text-[11px] uppercase tracking-[0.18em] text-slate-500 font-semibold">
-              Digital Print House
-            </div>
-          </div>
-        </a>
-
-        <nav className="hidden lg:flex items-center gap-8">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="text-sm font-medium text-slate-700 hover:text-orange-600 transition-colors"
-            >
-              {l.label}
-            </a>
-          ))}
-          <a
-            href={`tel:${PHONE_TEL}`}
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2.5 text-sm font-semibold shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 hover:-translate-y-0.5 transition-all"
-          >
-            <PhoneIcon className="w-4 h-4" />
-            Call Now
-          </a>
-        </nav>
-
-        <button
-          className="lg:hidden p-2 rounded-md text-slate-800"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
-          {open ? <CloseIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
-        </button>
-      </div>
-
-      {open && (
-        <div className="lg:hidden bg-white border-t border-slate-100 shadow-lg">
-          <div className="px-5 py-4 flex flex-col gap-1">
-            {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="px-3 py-3 rounded-lg text-slate-700 font-medium hover:bg-orange-50 hover:text-orange-600"
-              >
-                {l.label}
-              </a>
-            ))}
-            <a
-              href={`tel:${PHONE_TEL}`}
-              className="mt-2 text-center rounded-full bg-orange-500 text-white px-5 py-3 font-semibold"
-            >
-              📞 Call {PHONE_DISPLAY}
-            </a>
-          </div>
-        </div>
-      )}
-    </header>
-  );
-}
-
-/* ----------------------------- HERO ----------------------------- */
-function Hero() {
-  return (
-    <section id="home" className="relative gradient-hero pt-28 md:pt-36 pb-20 md:pb-28 overflow-hidden">
-      <div className="absolute inset-0 grid-pattern opacity-60 pointer-events-none" />
-
-      {/* floating decor */}
-      <div className="absolute top-24 right-8 md:right-16 floating hidden md:block">
-        <div className="text-7xl">🥕</div>
-      </div>
-      <div className="absolute bottom-10 left-6 md:left-20 floating hidden md:block" style={{ animationDelay: "1.2s" }}>
-        <div className="text-5xl">🖨️</div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-12 gap-10 items-center">
-        <div className="lg:col-span-7">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/80 backdrop-blur border border-orange-200 px-4 py-1.5 text-xs font-semibold text-orange-700 shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            Open now · Closes 9:00 PM
-          </div>
-
-          <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-slate-900 tracking-tight leading-[1.05]">
-            Printing that <br />
-            <span className="relative inline-block">
-              <span className="relative z-10 bg-gradient-to-r from-orange-500 via-orange-600 to-rose-500 bg-clip-text text-transparent">
-                pops.
-              </span>
-              <svg
-                viewBox="0 0 300 20"
-                className="absolute -bottom-2 left-0 w-full h-4 text-orange-300/70"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M2 14 Q 75 2, 150 10 T 298 8"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="6"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>{" "}
-            Service that <br />
-            <span className="text-slate-700">smiles.</span>
-          </h1>
-
-          <p className="mt-6 text-lg md:text-xl text-slate-600 max-w-xl leading-relaxed">
-            Your trusted neighbourhood <strong>Digital Print House & Online Service Centre</strong>{" "}
-            in Koottikada, Mayyanad. From visiting cards to flex banners — best quality, fastest
-            turnaround, fairest prices.
-          </p>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href={`tel:${PHONE_TEL}`}
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 text-white px-7 py-4 font-semibold shadow-xl shadow-orange-500/30 hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-orange-500/40 transition-all"
-            >
-              <PhoneIcon className="w-5 h-5" />
-              Call {PHONE_DISPLAY}
-            </a>
-            <a
-              href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
-                "Hi Carrot Digitals, I'd like to know more about your printing services."
-              )}`}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-green-500 text-white px-7 py-4 font-semibold shadow-xl shadow-green-500/30 hover:-translate-y-0.5 transition-all"
-            >
-              <WhatsAppIcon className="w-5 h-5" />
-              WhatsApp
-            </a>
-            <a
-              href="#services"
-              className="inline-flex items-center gap-2 rounded-full bg-white text-slate-800 border border-slate-200 px-7 py-4 font-semibold hover:border-orange-300 hover:text-orange-600 transition-all"
-            >
-              View Services →
-            </a>
-          </div>
-
-          <div className="mt-10 flex flex-wrap items-center gap-6 text-sm text-slate-600">
-            <div className="flex items-center gap-2">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <StarIcon key={i} className="w-5 h-5 text-amber-400 fill-amber-400" />
-                ))}
-              </div>
-              <span className="font-semibold text-slate-900">5.0</span>
-              <span>on Google</span>
             </div>
             <div className="flex items-center gap-2">
               <ClockIcon className="w-5 h-5 text-orange-500" />
@@ -1003,6 +574,13 @@ function Contact() {
               href="https://www.google.com/maps/dir/?api=1&destination=Carrot+Digitals+Koottikada+Mayyanad+Kollam"
               accent="rose"
             />
+            <InfoCard
+              icon={<FacebookIcon className="w-5 h-5" />}
+              label="Facebook"
+              value="Follow us for updates & offers"
+              href="https://www.facebook.com/profile.php?id=61592495566298"
+              accent="blue"
+            />
 
             {/* Hours */}
             <div className="rounded-2xl border border-slate-200 p-6 bg-gradient-to-br from-white to-orange-50/40">
@@ -1071,12 +649,13 @@ function InfoCard({
   label: string;
   value: string;
   href: string;
-  accent: "orange" | "green" | "rose";
+  accent: "orange" | "green" | "rose" | "blue";
 }) {
   const colors = {
     orange: "bg-orange-100 text-orange-600",
     green: "bg-green-100 text-green-600",
     rose: "bg-rose-100 text-rose-600",
+    blue: "bg-blue-100 text-blue-600",
   };
   return (
     <a
@@ -1157,6 +736,33 @@ function Footer() {
             Digital Print House and Online Service Centre in Koottikada, Mayyanad. Best quality
             printing services — opposite Sree Dharma Sastha Temple & Govt. New LPS.
           </p>
+          <div className="mt-5 flex items-center gap-3">
+            <a
+              href="https://www.facebook.com/profile.php?id=61592495566298"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+              className="w-10 h-10 rounded-full bg-white/5 hover:bg-blue-500 border border-white/10 flex items-center justify-center text-slate-300 hover:text-white transition-all"
+            >
+              <FacebookIcon className="w-4 h-4" />
+            </a>
+            <a
+              href={`https://wa.me/${WHATSAPP}`}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="WhatsApp"
+              className="w-10 h-10 rounded-full bg-white/5 hover:bg-green-500 border border-white/10 flex items-center justify-center text-slate-300 hover:text-white transition-all"
+            >
+              <WhatsAppIcon className="w-4 h-4" />
+            </a>
+            <a
+              href={`tel:${PHONE_TEL}`}
+              aria-label="Call"
+              className="w-10 h-10 rounded-full bg-white/5 hover:bg-orange-500 border border-white/10 flex items-center justify-center text-slate-300 hover:text-white transition-all"
+            >
+              <PhoneIcon className="w-4 h-4" />
+            </a>
+          </div>
         </div>
 
         <div>
@@ -1308,6 +914,13 @@ function CloseIcon({ className = "" }: { className?: string }) {
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
       <line x1="18" y1="6" x2="6" y2="18" />
       <line x1="6" y1="6" x2="18" y2="18" />
+    </svg>
+  );
+}
+function FacebookIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
     </svg>
   );
 }
